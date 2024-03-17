@@ -1,10 +1,16 @@
 # MVVM code base with SwiftUI
 A Demo to start MVVM Code base to start an iOS project.
 This app has a landing page where a list of transaction data is shown with a refresh activity view.
-The data of the transaction can be from the local directory mock data file or from a test server or from the real server, so if BE is not ready then UI work can continue by mock data.
+The data of the transaction list can be from the local directory mock data file or from a test server or from the real server, so if BE is not ready then UI work can continue by mock data.
+There is a forced error every 10 random tries to handle the error as well. 
 
+<p align="center">
+ <img src="https://github.com/Hasan-Parves/MVVM_SwiftUI/assets/45826738/50597be0-c7d2-44e6-83aa-b302f102f042" width="208" height="450">
+</p>
 
 ## Features
+
+
 - Design Patterns - MVVM
 - Dependency Injection
 - Modularization of HTTP Client
@@ -14,9 +20,11 @@ The data of the transaction can be from the local directory mock data file or fr
   - MockData or
   - Real Server Data
 - Network(Internet) change detection
+- Localization (English and German)
 - ViewModel Unit Test
 - UI Test
 
+  
 ## Sources
 ### Views
 * Landing page -> TransactionListView
