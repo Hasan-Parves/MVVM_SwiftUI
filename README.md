@@ -11,7 +11,7 @@ There is a forced error every 10 random tries to handle the error as well.
 ## Features
 
 
-- Design Patterns - MVVM
+- Design Pattern - MVVM
 - Dependency Injection
 - Modularization of HTTP Client
 - Use of Mock data if BE is not ready
