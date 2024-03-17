@@ -1,6 +1,6 @@
 # MVVM code base with SwiftUI
 A Demo to start MVVM Code base to start an iOS project.
-This app shows a list of transaction data. The data of the transaction list can be from the local directory mock data file or from a test server or from the real server, so if BE is not ready then UI work can continue by mock data.
+This app shows a list of transaction data. The data of the transaction list can be fetched from the local directory mock data file or from a test server or from the real production server, so if BE is not ready then UI work can continue by mock data.
 There is a forced error every 10 random tries to handle the error as well. 
 
 <p align="center">
