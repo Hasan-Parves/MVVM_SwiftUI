@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  WorldOfPAYBACK
+
+  Created by Hasan Parves on 05.02.24.
+  
+*/
+"transaction" = "Transaktionen";
+"transactionDetails" = "Transaktionsdetails";
+"total_value" = "Gesamtwert der Transaktionen";
+"transactionListForCategory %@" = "Transaktionsliste für Kategorie: %@";
+"transactionLoading" = "Transaktionen werden geladen...";
+"selecteCategory %@" = "Ausgewählte Kategorie: %@";
+"sumOfCurrencyType %@:" = "Summe des Währungstyps %@:";
