@@ -37,7 +37,8 @@ There is a forced error every 10 random tries to handle the error as well.
 ### ViewModel
 * TransactionListViewModel
     * ObservableObject to help SwiftUI TransactionListView 
-    * Used to fetch transactions 
+    * Used to fetch transactions
+    * Toggle show error alert published variable 
 
 ### Model
 * Transaction
