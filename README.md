@@ -1,36 +1,37 @@
 # MVVM code base with SwiftUI
-## A Demo to start MVVM Code base to start an iOS project.
+A Demo to start MVVM Code base to start an iOS project.
 
-## Features (Views)
+## Features
+### Views
 ✔️ Landing page -> TransactionListView\
 ✔️ Side Menu pages -> SideMenuView\
   ✔️ FeedView\
   ✔️ OnlineShoppingView\
-  ✔️ SettingsView\
+  ✔️ SettingsView
 
-## Features (ViewModel)
-✔️ TransactionListViewModel\
+### ViewModel
+✔️ TransactionListViewModel
 
-## Features (Model)
-✔️ Transaction\
+### Model
+✔️ Transaction
 
-## Features (API Service)
+### API Service
 ✔️ TransactionListService\
-✔️ TransactionEndpoints\
+✔️ TransactionEndpoints
 
-## Features (Mock API Service)
-✔️ MockTransactionListService\
+### Mock API Service
+✔️ MockTransactionListService
 
-## Features (Helper)
+### Helper
 ✔️ NetworkMonitor\
-✔️ NetworkUnavailableView\
+✔️ NetworkUnavailableView
 
-## Features (Unit Test)
-✔️ WorldOfPAYBACKTests\
-### Features (API Test Mock Spy)
-✔️ TransactionListServiceSpy\
-
-## Features (UI Test)
-✔️ WorldOfPAYBACKUITests\
+## Test
+### Unit Test
+✔️ WorldOfPAYBACKTests
+### API Test Mock Spy
+✔️ TransactionListServiceSpy
+### UI Test
+✔️ WorldOfPAYBACKUITests
 
 
