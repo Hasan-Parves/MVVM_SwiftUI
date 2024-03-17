@@ -1,66 +1,93 @@
 # MVVM code base with SwiftUI
 A Demo to start MVVM Code base to start an iOS project.
+This app has a landing page where a list of transaction data is shown with a refresh activity view.
+The data of the transaction can be from the local directory mock data file or from a test server or from the real server, so if BE is not ready then UI work can continue by mock data.
+
 
 ## Features
-✔️ Design Patterns - MVVM\
-✔️ Dependancy Injecttion\
-✔️ Modularization of Http Client\
-✔️ Use of Mock data if BE not ready\
-✔️ Preprocessor check for using\ 
-   ✔️ Test Server Data or\
-   ✔️ MockData or\
-   ✔️ Real Server Data\
-✔️ Network(Internet) change detection\
-✔️ ViewModel Unit Test\
-✔️ UI Test\
+- Design Patterns - MVVM
+- Dependency Injection
+- Modularization of HTTP Client
+- Use of Mock data if BE is not ready
+- Preprocessor check for using
+  - Test Server Data or
+  - MockData or
+  - Real Server Data
+- Network(Internet) change detection
+- ViewModel Unit Test
+- UI Test
 
 ## Sources
 ### Views
-✔️ Landing page -> TransactionListView\
-✔️ Side Menu pages -> SideMenuView\
-  ✔️ FeedView\
-  ✔️ OnlineShoppingView\
-  ✔️ SettingsView
+* Landing page -> TransactionListView
+* Side Menu pages -> SideMenuView
+  * FeedView
+  * OnlineShoppingView
+  * SettingsView
 
 ### ViewModel
-✔️ TransactionListViewModel
+* TransactionListViewModel
 
 ### Model
-✔️ Transaction
+* Transaction
 
 ### API Service
-✔️ TransactionListService\
-✔️ TransactionEndpoints
+* TransactionListService
+* TransactionEndpoints
 
 ### Mock API Service
-✔️ MockTransactionListService
+* MockTransactionListService
 
 ### Helper
-✔️ NetworkMonitor\
-✔️ NetworkUnavailableView
+* NetworkMonitor
+* NetworkUnavailableView
 
 ## Test
 ### Unit Test
-✔️ WorldOfPAYBACKTests
+* WorldOfPAYBACKTests
 ### API Test Mock Spy
-✔️ TransactionListServiceSpy
+* TransactionListServiceSpy
 ### UI Test
-✔️ WorldOfPAYBACKUITests
+* WorldOfPAYBACKUITests
 
-## How To Use 🔧
+## How to use Mock Data 🔧
 
-From your command line, clone and run developerFolio:
+For using Mock data init TransactionListView with MockTransactionListService
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/BharatKammakatla/Developer-Portfolio.git
+let useMockData = Bundle.main.object(forInfoDictionaryKey: "USE_MOCK_DATA") as! Bool
 
-# Go into the repository
-$ cd developerFolio
+if useMockData {
+    let transactionListService: TransactionListService = MockTransactionListService(httpClient: HTTPClient())
+    TransactionListView(transactionListService: transactionListService).environmentObject(networkMonitor)
+}
+```
+## How to use test Server Data 🔧
 
-# Install dependencies
-$ npm install
+Or for using Test Server data init TransactionListView with TransactionListAPIService
 
-#Start's development server
-$ npm
+```bash
+let useTestData = Bundle.main.object(forInfoDictionaryKey: "USE_TEST_DATA") as! Bool
 
+ if useTestData {
+/* Extension HTTPEndpoint also has this check for test data server in basePath,
+ but we can also call this from here as well. I like to inject dependency in calling.*/
+	let transactionListService: TransactionListService = TransactionListAPIService(
+					httpClient: HTTPClient(shouldUseTestServer: useTestData)
+				)
+   TransactionListView(transactionListService: transactionListService).environmentObject(networkMonitor)
+}
+```
+### Set the Test Base path 🔧
+
+```bash
+var testBasePath: String {
+        "api-test.payback.com/"
+    }
+
+  if shouldUseTestServer {
+            components?.path = "/\(endpoint.testBasePath)\(endpoint.path)"
+        } else {
+            components?.path = "/\(endpoint.basePath)\(endpoint.path)"
+}
+```
