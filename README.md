@@ -18,6 +18,8 @@ There is a forced error every 10 random tries to handle the error as well.
   - Test Server Data or
   - MockData or
   - Real Server Data
+- JSON Parsing
+- SortComparator
 - Network(Internet) change detection
 - Localization (English and German)
 - ViewModel Unit Test
@@ -35,10 +37,12 @@ There is a forced error every 10 random tries to handle the error as well.
 ### ViewModel
 * TransactionListViewModel
     * ObservableObject to help SwiftUI TransactionListView 
-    * Used to fetchTransactions 
+    * Used to fetch transactions 
 
 ### Model
 * Transaction
+  * Data Model
+  * Init with decoder 
 
 ### API Service
 * TransactionListService
@@ -50,6 +54,7 @@ There is a forced error every 10 random tries to handle the error as well.
 * MockTransactionListService
   * Used to return local directory mock data
   * Also used to simulate forced error
+  * SortComparator by BookingDate
 
 ### Helper
 * NetworkMonitor
