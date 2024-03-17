@@ -6,7 +6,7 @@ A Demo to start MVVM Code base to start an iOS project.
 ✔️ Dependancy Injecttion\
 ✔️ Modularization of Http Client\
 ✔️ Use of Mock data if BE not ready\
-✔️ Preprocessor check for using 
+✔️ Preprocessor check for using\ 
    ✔️ Test Server Data or\
    ✔️ MockData or\
    ✔️ Real Server Data\
