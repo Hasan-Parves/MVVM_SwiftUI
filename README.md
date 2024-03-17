@@ -34,20 +34,28 @@ There is a forced error every 10 random tries to handle the error as well.
 
 ### ViewModel
 * TransactionListViewModel
+    * ObservableObject to help SwiftUI TransactionListView 
+    * Used to fetchTransactions 
 
 ### Model
 * Transaction
 
 ### API Service
 * TransactionListService
+  * Custom API HTTP Client Request call
 * TransactionEndpoints
+  * Used to modify endpoint param like URL param, authentication data, validator, base path etc.  
 
 ### Mock API Service
 * MockTransactionListService
+  * Used to return local directory mock data
+  * Also used to simulate forced error
 
 ### Helper
 * NetworkMonitor
+  * Used to check internet connection.  
 * NetworkUnavailableView
+  * Used to show that the internet is not available. 
 
 ## Test
 ### Unit Test
